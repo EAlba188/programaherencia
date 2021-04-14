@@ -1,0 +1,17 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="programaventas.list_producto_tree_inherited">
+      <field name="name">programaventas.productos.listado.tree.inherit</field>
+      <field name="model">programaventa.producto</field>
+      <field name="inherit_id" ref="programaventas.list_producto_tree" />
+      <field name="arch" type="xml">
+        <field name="precio" position="after">
+          <field name="estado"/>
+        </field>
+      </field>
+    </record>
+
+  </data>
+</odoo>
