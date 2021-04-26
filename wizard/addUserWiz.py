@@ -4,14 +4,10 @@
 from odoo import models, fields, api
 
 class addUserWiz(models.TransientModel):
-    _name = "addUserWiz"
+    _name = "wizard.cambiousuario"
 
-    def _get_that_sales(self):
-        return self.env['sale.order'].browse(self.env.context.get('active_ids'))
-
-    choosenOnes = fields.One2many("sale.order", string="Usuarios", default=_get_that_sales)
-    theOne = fields.Many2one("res.user", string="Elegido")
+    theOne = fields.Many2one("res.users", string="Elegido")
 
     def setChoosenOnes(self):
-        for x in self.choosenOnes:
+        for x in self.env['sale.order'].browse(self.env.context.get('active_ids')):
             x.user_id = self.theOne

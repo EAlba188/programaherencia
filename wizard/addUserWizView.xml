@@ -3,11 +3,10 @@
 
         <record id="adduser_wizard" model="ir.ui.view">
             <field name="name">Selecciona usuario</field>
-            <field name="model">sale.order</field>
+            <field name="model">wizard.cambiousuario</field>
             <field name="arch" type="xml">
                 <form string="Elegir User">
                     <group>
-                        <field name="choosenOnes"/> <!-- widget="many2many_list"-->
                         <field name="theOne"/>
                     </group>
                     <footer>
@@ -28,13 +27,11 @@
 
         <record id="product_wizard_action" model="ir.actions.act_window">
             <field name="name">Elegir User</field>
-            <field name="model">wizard.addUserWiz</field>
+            <field name="res_model">wizard.cambiousuario</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>
-            <field name="binding_model_id" ref="model_sale.order"/>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
         </record>
-
-
 
 
 
