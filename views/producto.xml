@@ -1,6 +1,5 @@
-<odoo>
+<!--<odoo>
   <data>
-    <!-- explicit list view definition -->
 
     <record model="ir.ui.view" id="list_producto_tree_inherited">
       <field name="name">programaventas.productos.listado.tree.inherit</field>
@@ -14,4 +13,4 @@
     </record>
 
   </data>
-</odoo>
+</odoo>-->

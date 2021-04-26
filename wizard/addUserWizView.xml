@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+
+        <record id="adduser_wizard" model="ir.ui.view">
+            <field name="name">Selecciona usuario</field>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+                <form string="Elegir User">
+                    <group>
+                        <field name="choosenOnes"/> <!-- widget="many2many_list"-->
+                        <field name="theOne"/>
+                    </group>
+                    <footer>
+                        <button name="setChoosenOnes" string="Aplicar" class="oe_highlight" type="object"/>
+                        <button string="Cancel" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+        <!--<record id="product_wizard_action" model="ir.actions.act_window">
+            <field name="name">Elegir User</field>
+            <field name="res_model">addUserWiz</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>-->
+
+        <record id="product_wizard_action" model="ir.actions.act_window">
+            <field name="name">Elegir User</field>
+            <field name="model">wizard.addUserWiz</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_sale.order"/>
+        </record>
+
+
+
+
+
+    <!--<menuitem name="addUser" id="addUser" parent="sale_order_menu"
+              action="product_wizard_action"/>-->
+
+
+    </data>
+</odoo>
