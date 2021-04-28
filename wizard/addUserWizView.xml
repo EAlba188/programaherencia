@@ -8,6 +8,7 @@
                 <form string="Elegir User">
                     <group>
                         <field name="theOne"/>
+                        <field name="theClient"/>
                     </group>
                     <footer>
                         <button name="setChoosenOnes" string="Aplicar" class="oe_highlight" type="object"/>
