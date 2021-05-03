@@ -1,12 +1,12 @@
 <odoo>
     <data>
         <record model="ir.ui.view" id="list_ticket_tree_inherited">
-            <field name="name">helpdesk.ticket.type.tree.inherited</field>
+            <field name="name">helpdesk.ticket.tree.inherit</field>
             <field name="model">helpdesk.ticket</field>
-            <field name="inherit_id" ref="helpdesk.helpdesk_ticket_type_view_tree"/>
+            <field name="inherit_id" ref="helpdesk.helpdesk_tickets_view_tree"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='name']" position="after">
-                    <field name="nombre"></field>
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="tipo_inicial"/>
                 </xpath>
             </field>
         </record>

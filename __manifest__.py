@@ -25,9 +25,9 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/heredaview.xml',
         'wizard/addUserWizView.xml',
         'views/views.xml',
+        'views/heredaview.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
