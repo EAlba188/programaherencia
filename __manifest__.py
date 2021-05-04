@@ -26,6 +26,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'wizard/addUserWizView.xml',
+        'views/tipoView.xml',
         'views/views.xml',
         'views/heredaview.xml',
         'views/templates.xml',

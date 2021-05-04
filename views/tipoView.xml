@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="list_tipo_tree">
+            <field name="name">programaherencia.tipo.tree</field>
+            <field name="model">tipo.inicial</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+    <record model="ir.actions.act_window" id="tipo.action_window">
+        <field name="name">Tipos iniciales</field>
+        <field name="res_model">tipo.inicial</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+
+    <menuitem name="Tipos iniciales" id="tipo.inicial.menu" parent="helpdesk_ticket_menu_main"/>
+    <menuitem name="Tipos" id="tipos_list" parent="tipo.inicial.menu" action="tipo.action_window"/>
+
+
+    </data>
+</odoo>
