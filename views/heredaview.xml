@@ -1,4 +1,4 @@
-<!--<odoo>
+<odoo>
     <data>
         <record model="ir.ui.view" id="list_ticket_tree_inherited">
             <field name="name">helpdesk.ticket.tree.inherit</field>
@@ -10,5 +10,19 @@
                 </xpath>
             </field>
         </record>
+
+        <record model="ir.ui.view" id="list_ticket_form_inherited">
+            <field name="name">helpdesk.ticket.form.inherit</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="tipo_inicial"/>
+                </xpath>
+            </field>
+        </record>
+
+
+
     </data>
-</odoo>-->
+</odoo>

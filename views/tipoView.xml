@@ -4,23 +4,23 @@
             <field name="name">programaherencia.tipo.tree</field>
             <field name="model">tipo.inicial</field>
             <field name="arch" type="xml">
-                <tree>
-                    <field name="nombre"/>
+                <tree editable="bottom"> <!--editable hace que se pueda editar en tree-->
+                    <field name="name"/>
                 </tree>
             </field>
         </record>
 
 
 
-    <record model="ir.actions.act_window" id="tipo.action_window">
-        <field name="name">Tipos iniciales</field>
-        <field name="res_model">tipo.inicial</field>
-        <field name="view_mode">tree</field>
-    </record>
+        <record model="ir.actions.act_window" id="tipo_action_window">
+            <field name="name">Tipos iniciales</field>
+            <field name="res_model">tipo.inicial</field>
+            <field name="view_mode">tree</field>
+        </record>
 
 
-    <menuitem name="Tipos iniciales" id="tipo.inicial.menu" parent="helpdesk_ticket_menu_main"/>
-    <menuitem name="Tipos" id="tipos_list" parent="tipo.inicial.menu" action="tipo.action_window"/>
+        <menuitem name="Tipos iniciales" id="tipo_inicial_menu" parent="helpdesk.helpdesk_ticket_menu_main"/>
+        <menuitem name="Tipos" id="tipos_list" parent="tipo_inicial_menu" action="tipo_action_window"/>
 
 
     </data>

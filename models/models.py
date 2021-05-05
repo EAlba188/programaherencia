@@ -6,7 +6,7 @@ from odoo import models, fields, api
 class tipoInicial(models.Model):
     _name = "tipo.inicial"
 
-    nombre = fields.Char(string="Nombre")
+    name = fields.Char(string="Nombre")
 
 class heredaTickets(models.Model):
     _inherit = "helpdesk.ticket"
